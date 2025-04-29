@@ -4,6 +4,8 @@ WORKDIR /app
 # 프로젝트 전체 복사
 COPY . .
 
+RUN chmod +x ./gradlew
+
 # Gradle 빌드 (JAR 생성)
 RUN ./gradlew build --no-daemon
 
