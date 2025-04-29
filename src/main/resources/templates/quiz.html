@@ -117,7 +117,6 @@ pasteBox.addEventListener('paste', (event) => {
             if (!response.ok) throw new Error('서버 오류!');
 
             const data = await response.json(); // Flask면 JSON, Spring이면 text나 json!
-            console.log(data);
             resultBox.textContent = data;
           } catch (e) {
             resultBox.textContent = '예측 실패: ' + e.message;
