@@ -26,8 +26,8 @@ public class PredictController {
 
     @PostMapping("/recognize")
     public ResponseEntity<String> recognizeNpc(@RequestParam("file") MultipartFile file) throws IOException {
-        // Python FastAPI ¼­¹ö·Î Àü¼Û
-        String url = "https://huggingface.co/spaces/SeungHeon10/maple-image-matcher/match";
+        // Python FastAPI Â¼Â­Â¹Ã¶Â·ÃŽ Ã€Ã¼Â¼Ã›
+        String url = "https://SeungHeon10-maple-image-matcher.hf.space/match";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
